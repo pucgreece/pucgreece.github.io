@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PUC Greece</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">PUC Greece</div>
+    <ul>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#support">How to Support</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to PUC Greece</h1>
+    <p>Building hope, resilience, and community.</p>
+  </header>
+
+  <!-- Mission Section -->
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>
+      At PUC Greece, we are dedicated to creating safe, supportive, and sustainable 
+      environments for communities in need. We work on education, housing, and empowerment 
+      projects that foster dignity and long-term opportunity.
+    </p>
+  </section>
+
+  <!-- Impact Section -->
+  <section id="impact" class="alt-bg">
+    <h2>Our Impact</h2>
+    <p>
+      From Thessaloniki to refugee camps across Greece, our team has helped build structures, 
+      provide educational resources, and bring together volunteers from around the world. 
+      Every project represents lives touched and futures transformed.
+    </p>
+  </section>
+
+  <!-- Support Section -->
+  <section id="support">
+    <h2>How to Support</h2>
+    <p>
+      You can support us by volunteering, donating, or partnering with us to extend our reach. 
+      Together, we can continue to make a meaningful difference.
+    </p>
+    <a href="mailto:contact@pucgreece.org" class="btn">Get Involved</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 PUC Greece | Built with ❤️ for community</p>
+  </footer>
+</body>
+</html>
