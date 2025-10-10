@@ -1,16 +1,25 @@
-<!-- _layouts/default.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }} | PUC Greece</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
+
+  <!-- Navigation -->
   {% include navbar.html %}
 
+  <!-- Page Content -->
   <main>
     {{ content }}
   </main>
+
+  <!-- Optional Footer (add if needed) -->
+  <footer>
+    <p>© 2025 PUC Greece | Built with ❤️ for community</p>
+  </footer>
+
 </body>
 </html>
