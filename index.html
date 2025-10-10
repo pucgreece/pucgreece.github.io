@@ -3,40 +3,84 @@ layout: default
 title: PUC Greece
 ---
 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PUC Greece</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">PUC Greece</div>
+    <ul>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#support">Support</a></li>
+    </ul>
+  </nav>
+
+
+
 <!-- Hero Section -->
-<header class="hero">
-  <h1>Welcome to PUC Greece</h1>
-  <p>Building hope, resilience, and community.</p>
-</header>
+  <header class="hero-slider">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1567084208338-42a76f3e0c36?auto=format&fit=crop&w=1400&q=80');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1526481280690-7ead56bbd9ab?auto=format&fit=crop&w=1400&q=80');"></div>
+    <div class="overlay">
+      <h1 data-animate="fade-up">Projects for Underserved Communities: Greece</h1>
+      <p data-animate="fade-up" data-delay="0.2">Empowering communities through design, culture, and compassion.</p>
+    </div>
+    <div class="scroll-indicator"></div>
+  </header>
 
 <!-- Mission Section -->
-<section id="mission">
-  <h2>Our Mission</h2>
-  <p>
-    At PUC Greece, we are dedicated to creating safe, supportive, and sustainable 
-    environments for communities in need. We work on education, housing, and empowerment 
-    projects that foster dignity and long-term opportunity.
-  </p>
-</section>
+  <section id="mission" class="panel">
+    <div class="text" data-animate="fade-right">
+      <h2>Our Mission</h2>
+      <p>
+        PUC Greece unites students, engineers, and community leaders to design and construct
+        sustainable infrastructure that supports refugee and local populations in Northern Greece.
+        Our mission is to use engineering as a tool for dignity, education, and opportunity.
+      </p>
+    </div>
+    <div class="image" style="background-image:url('https://images.unsplash.com/photo-1526481280690-7ead56bbd9ab?auto=format&fit=crop&w=1350&q=80');" data-animate="fade-left"></div>
+  </section>
 
 <!-- Impact Section -->
-<section id="impact" class="alt-bg">
-  <h2>Our Impact</h2>
-  <p>
-    From Thessaloniki to refugee camps across Greece, our team has helped build structures, 
-    provide educational resources, and bring together volunteers from around the world. 
-    Every project represents lives touched and futures transformed.
-  </p>
-</section>
+  <section id="impact" class="panel reverse">
+    <div class="image" style="background-image:url('https://images.unsplash.com/photo-1602333008494-6da1b4b8b67a?auto=format&fit=crop&w=1350&q=80');" data-animate="fade-right"></div>
+    <div class="text" data-animate="fade-left">
+      <h2>Our Impact</h2>
+      <p>
+        Partnering with the YMCA of Thessaloniki, our 2025 team is developing new recreational 
+        and community spaces at Camp Drama — providing safe gathering places for families 
+        and youth from diverse backgrounds. Each project blends cultural exchange with 
+        hands-on learning and design for social good.
+      </p>
+    </div>
+  </section>
 
 <!-- Support Section -->
-<section id="support">
-  <h2>How to Support</h2>
-  <p>
-    You can support us by volunteering, donating, or partnering with us to extend our reach. 
-    Together, we can continue to make a meaningful difference.
-  </p>
-  <a href="mailto:contact@pucgreece.org" class="btn">Get Involved</a>
-</section>
+  <section id="support" class="panel">
+    <div class="text" data-animate="fade-right">
+      <h2>How to Support</h2>
+      <p>
+        You can help by donating, partnering, or volunteering to expand our reach. 
+        Every contribution strengthens our shared vision of empowerment, inclusion, 
+        and hope. Together, we build more than structures — we build community.
+      </p>
+      <a href="mailto:contact@pucgreece.org" class="btn">Get Involved</a>
+    </div>
+    <div class="image" style="background-image:url('https://images.unsplash.com/photo-1533001802111-6a29bcd0b066?auto=format&fit=crop&w=1350&q=80');" data-animate="fade-left"></div>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 PUC Greece | Built with ❤️ at The University of Texas at Austin</p>
+  </footer>
 
+  <script src="script.js"></script>
+</body>
+</html>
