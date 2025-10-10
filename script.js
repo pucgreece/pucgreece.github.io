@@ -1,13 +1,11 @@
-// --- Hero Slider ---
+// --- Hero Slideshow ---
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 
 function changeSlide() {
   slides[currentSlide].classList.remove("active");
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add("active");
-}
-setInterval(changeSlide, 6000); // Change every 6 seconds
+  currentSlide
+
 
 // --- Scroll Animations ---
 const animatedElements = document.querySelectorAll("[data-animate]");
