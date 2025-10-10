@@ -1,0 +1,4 @@
+title: PUC Greece
+description: A website for PUC Greece
+baseurl: "" # only set this if you're using a subdirectory (see below)
+url: ""     # GitHub Pages will figure this out automatically
