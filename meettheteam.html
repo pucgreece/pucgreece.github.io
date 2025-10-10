@@ -1,164 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meet the Team</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: white;
-      color: #004466;
-    }
+---
+layout: default
+title: Meet the Team
+---
 
-    header {
-      background-color: #004466;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
+<header>
+  <h1>Meet the Team</h1>
+  <p>Get to know the amazing people behind this project</p>
+</header>
 
-    .team-photo {
-      text-align: center;
-      margin: 2rem auto;
-    }
+<section class="team-photo">
+  <!-- Replace with actual group photo -->
+  <!-- <img src="pictures/team-photo.jpeg" alt="Team Group Photo"> -->
+</section>
 
-    .team-photo img {
-      max-width: 90%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+<section class="team-grid">
+  <div class="member-card">
+    <img src="pictures/Sara.jpeg" alt="Sara">
+    <div class="member-name">Sara Anees</div>
+    <div class="member-bio">Project Manager</div>
+  </div>
 
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+  <div class="member-card">
+    <img src="pictures/Eden.jpeg" alt="Eden">
+    <div class="member-name">Eden Gezehagn</div>
+    <div class="member-bio">Assistant Project Manager</div>
+  </div>
 
-    .member-card {
-      background-color: #f4f8fa;
-      border: 1px solid #d0e3ea;
-      border-radius: 10px;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
-    }
+  <div class="member-card">
+    <img src="pictures/Saad.jpeg" alt="Saad">
+    <div class="member-name">Saad Ijazi</div>
+    <div class="member-bio">Engineering & Technical Design Manager</div>
+  </div>
 
-    .member-card:hover {
-      transform: translateY(-5px);
-    }
+  <div class="member-card">
+    <img src="pictures/Iliana.jpeg" alt="Iliana">
+    <div class="member-name">Iliana Beck</div>
+    <div class="member-bio">Health & Environmental Safety Manager</div>
+  </div>
 
-    .member-card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
+  <div class="member-card">
+    <img src="pictures/Steph.jpeg" alt="Steph">
+    <div class="member-name">Steph Guevera</div>
+    <div class="member-bio">Communication & Cultural Awareness Manager</div>
+  </div>
 
-    .member-name {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      color: #003344;
-    }
+  <div class="member-card">
+    <img src="pictures/Issa.jpeg" alt="Issa">
+    <div class="member-name">Isabelle Ramirez</div>
+    <div class="member-bio">Fundraising & Social Media Manager</div>
+  </div>
 
-    .member-bio {
-      font-size: 0.95rem;
-      color: #333;
-    }
+  <div class="member-card">
+    <img src="pictures/Mario.jpeg" alt="Mario">
+    <div class="member-name">Mario Hernandez</div>
+    <div class="member-bio">Logistics & Quality Control Manager</div>
+  </div>
 
-    @media (max-width: 600px) {
-      .member-card {
-        padding: 1rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  
-<!-- Navigation -->
-  <nav>
-    <div class="logo">PUC Greece</div>
-    <ul>
-      <li class="dropdown">
-        <a href="#mission">Mission</a>
-        <ul class="dropdown-content">
-          <li><a href="aboutpuc.html">About PUC</a></li>
-          <li><a href="meettheteam.html">Meet The Team</a></li>
-          <li><a href="abouttheproject.html">About the Project</a></li>
-        </ul>
-      </li>
-      <li><a href="#impact">Impact</a></li>
-      <li><a href="#support">How to Support</a></li>
-    </ul>
-  </nav>
-  
-  <header>
-    <h1>Meet the Team</h1>
-    <p>Get to know the amazing people behind this project</p>
-  </header>
-
-  <section class="team-photo">
-    <!-- Replace with actual group photo
-    <img src="pictures/team-photo.jpeg" alt="Team Group Photo"> -->
-  </section>
-
-  <section class="team-grid">
-    <div class="member-card">
-      <img src="pictures/Sara.jpeg" alt="Sara">
-      <div class="member-name">Sara Anees</div>
-      <div class="member-bio">Project Manager</div>
-    </div>
-
-    <div class="member-card">
-      <img src="pictures/Eden.jpeg" alt="Eden">
-      <div class="member-name">Eden Gezehagn</div>
-      <div class="member-bio">Assistant Project Manager</div>
-    </div>
-
-    <div class="member-card">
-      <img src="pictures/Saad.jpeg" alt="Saad">
-      <div class="member-name">Saad Ijazi</div>
-      <div class="member-bio">Engineering & Technical Design Manager</div>
-    </div>
-
-    <div class="member-card">
-      <img src="pictures/Iliana.jpeg" alt="Iliana">
-      <div class="member-name">Iliana Beck</div>
-      <div class="member-bio">Health & Environmental Safety Manager</div>
-    </div>
-
-    <div class="member-card">
-      <img src="pictures/Steph.jpeg" alt="Steph">
-      <div class="member-name">Steph Guevera</div>
-      <div class="member-bio">Communication & Cultural Awareness Manager</div>
-    </div>
-
-    <div class="member-card">
-      <img src="pictures/Issa.jpeg" alt="Issa">
-      <div class="member-name">Isabelle Ramirez</div>
-      <div class="member-bio">Fundraising & Social Media Manager</div>
-    </div>
-
-    <div class="member-card">
-      <img src="pictures/Mario.jpeg" alt="Mario">
-      <div class="member-name">Mario Hernandez</div>
-      <div class="member-bio">Logistics & Quality Control Manager</div>
-    </div>
-
-    <div class="member-card">
-      <img src="pictures/member8.jpg" alt="Eesha">
-      <div class="member-name">Eesha Bilal</div>
-      <div class="member-bio">Technical Procurement Manager</div>
-    </div>
-
-  </section>
-
-</body>
-</html>
+  <div class="member-card">
+    <img src="pictures/member8.jpg" alt="Eesha">
+    <div class="member-name">Eesha Bilal</div>
+    <div class="member-bio">Technical Procurement Manager</div>
+  </div>
+</section>
