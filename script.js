@@ -1,0 +1,22 @@
+// --- Hero Slider ---
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function changeSlide() {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+}
+setInterval(changeSlide, 6000); // Change every 6 seconds
+
+// --- Scroll Animations ---
+const animatedElements = document.querySelectorAll("[data-animate]");
+function revealOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+  animatedElements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) el.classList.add("visible");
+  });
+}
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
