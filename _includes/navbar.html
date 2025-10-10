@@ -1,17 +1,18 @@
 <!-- _includes/navbar.html -->
+
 <nav>
   <div class="logo">PUC Greece</div>
   <ul>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>  <!-- This is your Home button -->
     <li class="dropdown">
       <a href="#mission">Mission</a>
       <ul class="dropdown-content">
-        <li><a href="aboutpuc.html">About PUC</a></li>
-        <li><a href="meettheteam.html">Meet The Team</a></li>
-        <li><a href="abouttheproject.html">About the Project</a></li>
+        <li><a href="{{ '/aboutpuc.html' | relative_url }}">About PUC</a></li>
+        <li><a href="{{ '/meettheteam.html' | relative_url }}">Meet The Team</a></li>
+        <li><a href="{{ '/abouttheproject.html' | relative_url }}">About the Project</a></li>
       </ul>
     </li>
     <li><a href="#impact">Impact</a></li>
     <li><a href="#support">How to Support</a></li>
   </ul>
 </nav>
-
