@@ -4,8 +4,12 @@ const slides = document.querySelectorAll(".slide");
 
 function changeSlide() {
   slides[currentSlide].classList.remove("active");
-  currentSlide
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+}
 
+// Change slide every 6 seconds
+setInterval(changeSlide, 6000);
 
 // --- Scroll Animations ---
 const animatedElements = document.querySelectorAll("[data-animate]");
