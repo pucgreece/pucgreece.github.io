@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PUC Greece</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Preload hero images to avoid white flashes -->
+  <link rel="preload" as="image" href="camp1.jpeg" />
+  <link rel="preload" as="image" href="group.jpeg" />
+  <link rel="preload" as="image" href="camp2.jpeg" />
+  
 </head>
 <body>
   
@@ -24,16 +30,19 @@
     </ul>
   </nav>
 
-<!-- Hero Section using your uploaded group.jpeg -->
-<header class="hero-slider">
-  <!-- Your team photo -->
-  <div class="slide active" style="background-image:url('group.jpeg');"></div>
 
-  <!-- Stock photos of Greece -->
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1553949345-eb786bb3e5ba?auto=format&fit=crop&w=1600&q=80');"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1502920917128-1aa500764b43?auto=format&fit=crop&w=1600&q=80');"></div>
+  <!-- Hero (no fade, no flash) -->
+  <header class="hero">
+    <div class="hero-track" id="heroTrack">
+      <!-- 1) Holding hands -->
+      <img src="camp1.jpeg" alt="PUC Greece walking with a child at Camp Drama" />
+      <!-- 2) Group with Greek flag -->
+      <img src="group.jpeg" alt="PUC Greece student team holding the Greek flag" />
+      <!-- 3) Team in vests -->
+      <img src="camp2.jpeg" alt="PUC Greece team on site wearing safety vests" />
+    </div>
 
+  
   <div class="overlay">
     <h1 data-animate="fade-up">Projects for Underserved Communities: Greece</h1>
     <p data-animate="fade-up" data-delay="0.2">
