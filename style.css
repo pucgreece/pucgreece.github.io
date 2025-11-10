@@ -1,5 +1,6 @@
 /* Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #fff;
@@ -27,50 +28,71 @@ nav {
 }
 nav .logo { font-weight: bold; color: #fff; font-size: 1.3rem; }
 nav ul { list-style: none; display: flex; }
-nav ul li { margin-left: 20px; }
+nav ul li { margin-left: 20px; position: relative; }
 nav ul li a { color: #fff; text-decoration: none; font-weight: 500; }
 nav ul li a:hover { text-decoration: underline; }
 
-/* Hero Slider */
-.hero-slider {
+/* (Simple) dropdown styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba(13, 94, 175, 0.95);
+  padding: 0.5rem 0;
+  top: 2rem;
+  min-width: 180px;
+}
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.dropdown:hover .dropdown-content { display: block; }
+
+/* Hero (no fade, no flash) */
+.hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  background: #0D5EAF; /* fallback while first image decodes */
+  margin-top: 64px;    /* make room for fixed navbar so it doesn't overlap */
 }
-.slide {
-  position: absolute;
-  width: 100%; height: 100%;
-  top: 0; left: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transform: scale(1.1);
-  transition: opacity 1.5s ease, transform 6s ease;
+.hero-track {
+  display: flex;
+  width: 300%;          /* 3 images */
+  height: 100%;
+  transform: translateX(0);
+  transition: transform 0.8s ease-out;
 }
-.slide.active {
-  opacity: 1;
-  transform: scale(1);
+.hero img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;       /* avoids gaps/flicker */
 }
+
+/* Overlay text */
 .overlay {
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  display: grid;
+  place-items: center;
   text-align: center;
   color: white;
   text-shadow: 0 2px 20px rgba(0,0,0,0.4);
   z-index: 5;
+  padding: 0 1rem;
 }
 .overlay h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   margin-bottom: 1rem;
 }
 .overlay p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: auto;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Scroll Indicator */
+/* Scroll Indicator (optional) */
 .scroll-indicator {
   position: absolute;
   bottom: 20px; left: 50%;
@@ -94,39 +116,37 @@ nav ul li a:hover { text-decoration: underline; }
   100% { opacity: 0; transform: translate(-50%, 20px); }
 }
 
-/* Fullscreen Sections */
+/* Fullscreen Sections (no fixed attachment to avoid mobile lag/flash) */
 .fullscreen {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed;  <-- disabled on purpose */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  scroll-margin-top: 80px; /* anchor links account for fixed nav */
 }
 .fullscreen::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  inset: 0;
   background: var(--overlay-dark);
 }
 .fullscreen .content {
   position: relative;
   z-index: 5;
-  max-width: 800px;
+  max-width: 900px;
   padding: 2rem;
 }
 .fullscreen h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
   color: #fff;
 }
-.fullscreen p {
-  font-size: 1.2rem;
-}
+.fullscreen p { font-size: 1.1rem; }
 
 /* Button */
 .btn {
@@ -149,13 +169,15 @@ footer {
   padding: 1rem;
 }
 
-/* Fade Animations */
+/* Reveal (disabled by default to ensure visibility even if JS fails) */
 [data-animate] {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
-}
-[data-animate].visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  transition: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .overlay h1 { font-size: 2rem; }
+  .overlay p { font-size: 1rem; }
 }
