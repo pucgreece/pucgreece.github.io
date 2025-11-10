@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PUC Greece</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Preload hero images to avoid white flashes -->
   <link rel="preload" as="image" href="camp1.jpeg" />
   <link rel="preload" as="image" href="group.jpeg" />
   <link rel="preload" as="image" href="camp2.jpeg" />
-  
 </head>
 <body>
-  
   <!-- Navbar -->
   <nav>
     <div class="logo">PUC Greece</div>
     <ul>
       <li class="dropdown">
-        <a href="index.html#mission" class="dropbtn">Mission ▾</a>
+        <a href="#mission" class="dropbtn">Mission ▾</a>
         <div class="dropdown-content">
           <a href="meettheteam.html">Meet the Team</a>
-          <a href="index.html#mission">Project Details</a>
+          <a href="#mission">Project Details</a>
         </div>
       </li>
-      <li><a href="index.html#impact">Impact</a></li>
-      <li><a href="index.html#support">Support</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#support">Support</a></li>
     </ul>
   </nav>
-
 
   <!-- Hero (no fade, no flash) -->
   <header class="hero">
@@ -42,16 +40,12 @@
       <img src="camp2.jpeg" alt="PUC Greece team on site wearing safety vests" />
     </div>
 
-  
-  <div class="overlay">
-    <h1 data-animate="fade-up">Projects for Underserved Communities: Greece</h1>
-    <p data-animate="fade-up" data-delay="0.2">
-      Empowering communities through engineering, empathy, and collaboration.
-    </p>
-  </div>
-  <div class="scroll-indicator"></div>
-</header>
-
+    <div class="overlay">
+      <h1>Projects for Underserved Communities: Greece</h1>
+      <p>Engineering + Social Work students building sustainable recreation spaces with the Camp Drama community.</p>
+    </div>
+    <div class="scroll-indicator"></div>
+  </header>
 
   <!-- Mission Section -->
   <section id="mission" class="fullscreen" style="background-image:url('https://images.unsplash.com/photo-1526481280690-7ead56bbd9ab?auto=format&fit=crop&w=1350&q=80');">
@@ -98,3 +92,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
